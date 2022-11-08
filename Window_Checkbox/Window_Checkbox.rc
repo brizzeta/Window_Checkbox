@@ -1,0 +1,167 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 508, 356
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Викторина",IDC_STATIC,234,7,36,8
+    CONTROL         "год",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,19,35,27,10
+    CONTROL         "неделю",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,19,50,42,10
+    CONTROL         "месяц",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,19,65,36,10
+    GROUPBOX        "Скорпионы могут жить без воды:",IDC_STATIC,14,25,155,53
+    CONTROL         "зашиты от хищников",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,101,87,10
+    CONTROL         "передвижения на большие расстояния",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,119,149,10
+    CONTROL         "победы над соперниками в битве",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,135,129,10
+    CONTROL         "защиты его детей",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,151,77,10
+    GROUPBOX        "Кенгуру нужны накаченные руки для:",IDC_STATIC,14,90,155,73
+    PUSHBUTTON      "Проверить",IDC_BUTTON1,224,329,55,20
+    CONTROL         "да",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,185,24,10
+    CONTROL         "нет",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,18,200,27,10
+    GROUPBOX        "У птиц 2 гортани:",IDC_STATIC,14,175,155,40
+    CONTROL         "охлаждения организма",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,238,94,10
+    CONTROL         "острого слуха",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,18,252,62,10
+    GROUPBOX        "Слонам нужны большие уши для:",IDC_STATIC,14,228,154,40
+    CONTROL         "самка",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON | WS_GROUP,19,287,35,10
+    CONTROL         "самец",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,19,301,36,10
+    GROUPBOX        "У гиен главную роль в стае играет:",IDC_STATIC,14,276,153,40
+    CONTROL         "1 минуту",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON | WS_GROUP,201,36,45,10
+    CONTROL         "13 секунд",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,201,51,49,10
+    CONTROL         "5 секунд",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,201,64,45,10
+    GROUPBOX        "Рекорд полёта курицы:",IDC_STATIC,194,27,141,52
+    CONTROL         "овощную ботву",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,102,69,10
+    CONTROL         "сено",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,119,31,10
+    CONTROL         "сухари",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,136,38,10
+    CONTROL         "морковь",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,152,44,10
+    GROUPBOX        "Кроликам можно есть:",IDC_STATIC,194,91,141,73
+    CONTROL         "да",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON | WS_GROUP,201,185,24,10
+    CONTROL         "нет",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,201,198,27,10
+    GROUPBOX        "Пауки едят змей:",IDC_STATIC,194,175,141,40
+    CONTROL         "10 секунд",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON | WS_GROUP,201,238,49,10
+    CONTROL         "день",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON,201,268,32,10
+    CONTROL         "2 недели",IDC_RADIO17,"Button",BS_AUTORADIOBUTTON,201,282,46,10
+    CONTROL         "2 часа",IDC_RADIO18,"Button",BS_AUTORADIOBUTTON,201,253,38,10
+    GROUPBOX        "Таракан может прожить без головы:",IDC_STATIC,194,228,141,71
+    GROUPBOX        "Ежи носят яблоки на спине для:",IDC_STATIC,365,27,136,61
+    CONTROL         "маскировки своего запаха",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,372,36,105,10
+    CONTROL         "запасов на зиму",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,372,49,71,10
+    CONTROL         "несут до своей норки",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,372,62,88,10
+    CONTROL         "борьбы с паразитами",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,372,75,89,10
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP,399,95,57,50
+    EDITTEXT        IDC_EDIT1,372,201,99,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,372,253,99,14,ES_AUTOHSCROLL
+    LTEXT           "Какое животное не может умереть от старости:",IDC_STATIC,372,177,110,17
+    LTEXT           "Рекорд бега черепахи по суше (км/час:)",IDC_STATIC,372,230,110,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 501
+        VERTGUIDE, 201
+        VERTGUIDE, 251
+        VERTGUIDE, 270
+        VERTGUIDE, 372
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 349
+        HORZGUIDE, 36
+        HORZGUIDE, 102
+        HORZGUIDE, 185
+        HORZGUIDE, 238
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "img.bmp"
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
