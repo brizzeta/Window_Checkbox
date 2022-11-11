@@ -1,4 +1,4 @@
-#include <windows.h>
+п»ї#include <windows.h>
 #include <tchar.h>
 #include <cmath>
 #include <commctrl.h>
@@ -33,12 +33,12 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
 
     case WM_COMMAND:
     {
-        if (wp == IDC_BUTTON1) //если нажата кнопка "Проверить"
+        if (wp == IDC_BUTTON1) //РµСЃР»Рё РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° "РџСЂРѕРІРµСЂРёС‚СЊ"
         {
             TCHAR str[20];
             double answer = 0;
 
-            //проверка radio
+            //РїСЂРѕРІРµСЂРєР° radio
             LRESULT res_radio[7] =
             {
                 SendDlgItemMessage(hWnd, IDC_RADIO1, BM_GETCHECK, 0, 0),
@@ -57,7 +57,7 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
                 }
             }
 
-            //проверка check
+            //РїСЂРѕРІРµСЂРєР° check
             LRESULT res_check[8] =
             {
                 SendDlgItemMessage(hWnd, IDC_CHECK1, BM_GETCHECK, 0, 0),
@@ -82,10 +82,10 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
                 }
             }
 
-            //проверка edit
+            //РїСЂРѕРІРµСЂРєР° edit
             TCHAR answ[][7] =
             {
-                TEXT("Медуза"),
+                TEXT("РњРµРґСѓР·Р°"),
                 TEXT("15"),
                 TEXT("112"),
                 TEXT("8")
@@ -101,12 +101,12 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
                 }
             }
 
-            //вывод результата в progress control
+            //РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р° РІ progress control
             answer = round(answer);
             SendMessage(hProg, PBM_SETPOS, WPARAM(answer), 0);            
         }
 
-        //если выбран пункт меню "Выход"
+        //РµСЃР»Рё РІС‹Р±СЂР°РЅ РїСѓРЅРєС‚ РјРµРЅСЋ "Р’С‹С…РѕРґ"
         if (wp == ID_40001)
         {
             EndDialog(hWnd, 0);
