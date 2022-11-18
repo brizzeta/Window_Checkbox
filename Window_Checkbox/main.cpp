@@ -4,13 +4,30 @@
 #include <commctrl.h>
 #include "resource.h"
 
-HWND edit[4], hSpin1, hSpin2, hProg;
+HWND edit[4], hEdit, hSpin1, hSpin2, hProg;
+UINT time = 60;
+BOOL check_but = false;  //для проверки нажатия кнопки
 
 BOOL CALLBACK DlgProc(HWND, UINT, WPARAM, LPARAM);
 
 int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPTSTR lpszCmdLine, int nCmdShow)
 {
     return  DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG1), NULL, (DLGPROC)DlgProc);
+}
+
+DWORD WINAPI Time(LPVOID hEdit)  //таймер
+{
+    HWND Edit = (HWND)hEdit;    
+
+    while(time > 0)
+    {
+        TCHAR text[10];
+        time--;
+        wsprintf(text, TEXT("%d"), time);
+        SetWindowText(Edit, text);
+        Sleep(1000);
+    }    
+    return 0;
 }
 
 BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
@@ -22,6 +39,8 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
         edit[1] = GetDlgItem(hWnd, IDC_EDIT2);
         edit[2] = GetDlgItem(hWnd, IDC_EDIT3);
         edit[3] = GetDlgItem(hWnd, IDC_EDIT4);
+        hEdit = GetDlgItem(hWnd, IDC_EDIT5);
+        CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Time, hEdit, 0, NULL); //создаем поток
         hSpin1 = GetDlgItem(hWnd, IDC_SPIN1);
         hSpin2 = GetDlgItem(hWnd, IDC_SPIN2);
         hProg = GetDlgItem(hWnd, IDC_PROGRESS1);
@@ -33,8 +52,15 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
 
     case WM_COMMAND:
     {
-        if (wp == IDC_BUTTON1) //если нажата кнопка "Проверить"
+        if (time == 0 && !check_but)  //если закончилось время и не была нажата клавиша проверки
         {
+            MessageBox(0, TEXT("Время закончилось"), TEXT(""), MB_OK);
+            EndDialog(hWnd, 0);
+        }
+        else if (wp == IDC_BUTTON1) //если нажата кнопка "Проверить"
+        {
+            check_but = true;
+            time = 0;
             TCHAR str[20];
             double answer = 0;
 

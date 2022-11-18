@@ -108,9 +108,11 @@ BEGIN
     LTEXT           "Рекорд высоты собаки (см):",IDC_STATIC,372,245,96,8
     LTEXT           "Результат:",IDC_STATIC,372,322,38,8
     CONTROL         "",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | WS_BORDER,372,335,99,14
-    LTEXT           "Количество лапок у пауков:",IDC_STATIC,372,281,95,8
+    LTEXT           "Количество лапок у пауков:",IDC_STATIC,372,281,99,8
     EDITTEXT        IDC_EDIT4,372,291,89,14,ES_AUTOHSCROLL
     CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,460,291,12,14
+    EDITTEXT        IDC_EDIT5,118,335,48,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Осталось:",IDC_STATIC,66,337,35,8
 END
 
 
@@ -136,6 +138,7 @@ BEGIN
         HORZGUIDE, 102
         HORZGUIDE, 185
         HORZGUIDE, 238
+        HORZGUIDE, 341
     END
 END
 #endif    // APSTUDIO_INVOKED
